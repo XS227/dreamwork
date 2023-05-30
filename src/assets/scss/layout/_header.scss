@@ -1,0 +1,128 @@
+/*=====================
+    Header Style start
+==========================*/
+
+header {
+  padding: calc(15px + (28 - 15) * ((100vw - 320px) / (1920 - 320))) 0;
+  background-color: $white;
+
+  .right-nav {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 1199px) {
+      margin-left: auto;
+    }
+
+    .navbar-nav {
+      display: flex;
+      align-items: center;
+      gap: calc(14px + (30 - 14) * ((100vw - 320px) / (1920 - 320)));
+      padding-top: 0;
+      margin-right: calc(14px + (30 - 14) * ((100vw - 320px) / (1920 - 320)));
+
+      a {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        color: #262b47;
+      }
+    }
+  }
+
+  &.nav-up {
+    &.nav-down {
+      .header-sticky {
+        top: -120px;
+      }
+
+      .main-menu {
+        padding: 10px 0;
+      }
+    }
+
+    .header-sticky {
+      padding: 12px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      margin-top: 0;
+      background-color: $white;
+      box-shadow: 0px 4px 10px rgba(23, 32, 90, 0.15);
+      transition: all 0.5s ease-in-out;
+      z-index: 6;
+    }
+  }
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width:1199px) {
+      justify-content: unset;
+    }
+
+    .brand-logo {
+      width: 200px;
+
+      @media (max-width: 1199px) {
+        width: calc(140px + (200 - 140) * ((100vw - 320px) / (1199 - 320)));
+      }
+    }
+
+    .btn-close {
+      position: relative;
+      right: unset;
+      top: unset;
+      margin: 17px 14px 17px auto;
+      padding: 0;
+    }
+  }
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $black;
+  opacity: 0.1;
+  display: none;
+  z-index: 1;
+
+  &.show {
+    display: block;
+  }
+}
+
+@keyframes square-jelly-box-animate {
+  17% {
+    border-bottom-right-radius: 10%;
+  }
+
+  25% {
+    transform: translateY(25%) rotate(22.5deg);
+  }
+
+  50% {
+    border-bottom-right-radius: 100%;
+    transform: translateY(50%) scaleY(.9) rotate(45deg);
+  }
+
+  75% {
+    transform: translateY(25%) rotate(67.5deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+
+@keyframes square-jelly-box-shadow {
+  50% {
+    transform: scaleX(1.25);
+  }
+}

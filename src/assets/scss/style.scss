@@ -1,0 +1,26 @@
+// utils scss files
+@import "utils/variables";
+@import "utils/animation";
+
+// base scss files
+@import "base/reset";
+@import "base/typography";
+
+// components scss files
+@import "components/auth";
+@import "components/button";
+@import "components/nav";
+@import "components/title";
+@import "components/cursor";
+
+// layout scss files
+@import "layout/footer";
+@import "layout/header";
+@import "layout/home";
+
+// pages
+@import "pages/home";
+
+
+
+// themes scss files

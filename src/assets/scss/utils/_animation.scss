@@ -1,0 +1,67 @@
+/*=====================
+    Animation Css
+==========================*/
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translatey(20px);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translatey(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translatey(0px);
+  }
+
+  50% {
+    transform: translatey(20px);
+  }
+
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes left-right {
+  0% {
+    transform: translatey(0px);
+  }
+
+  50% {
+    transform: translatex(20px);
+  }
+
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(-45deg);
+  }
+
+  100% {
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes floating {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 1920px;
+  }
+}

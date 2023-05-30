@@ -1,0 +1,46 @@
+/*=====================
+    Custom cursor Scss start
+==========================*/
+.cursor {
+  position: fixed;
+  top: -5px;
+  left: -15px;
+  width: 10px;
+  height: 10px;
+  background-color: #3DDBBF;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+
+  #ngx-cursor {
+    span {
+      z-index: 999 !important;
+      opacity: 1 !important;
+      width: 10px !important;
+      height: 10px !important;
+      background-color: #3DDBBF !important;
+      left: -5px !important;
+      top: -3px !important;
+      border-radius: 2px !important;
+
+      @media (max-width:767px) {
+        display: none !important;
+      }
+    }
+  }
+}
+
+#cursor-border {
+  --size: 30px;
+  position: fixed;
+  top: calc(var(--size) / -2);
+  left: calc(var(--size) / -2);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #3DDBBF;
+  pointer-events: none;
+  transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out, height 0.15s ease-out,
+    background-color 0.15s ease-out;
+  z-index: 999;
+}

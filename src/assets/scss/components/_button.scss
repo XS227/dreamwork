@@ -1,0 +1,85 @@
+/*=====================
+    Button Style start
+==========================*/
+.btn-close {
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn-disable {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.btn {
+  padding: calc(6px + (11 - 6) * ((100vw - 320px) / (1920 - 320))) calc(12px + (21 - 12) * ((100vw - 320px) / (1920 - 320)));
+  border-radius: 5px;
+  font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+  font-weight: 500;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &-outline-solid {
+    background-color: $white;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    transition: all 0.5s ease;
+
+    &:hover {
+      background-color: $primary-color;
+      border: 1px solid $primary-color;
+      color: $white;
+    }
+  }
+}
+
+.btn-solid {
+  background-color: $primary-color;
+  border: 1px solid $primary-color;
+  color: $white;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+  }
+}
+
+
+.btn-outline {
+  background-color: $white;
+  border: 1px solid $primary-color;
+  color: $primary-color;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    color: $white;
+  }
+}
+
+.service-button {
+  width: -webkit-fill-available;
+  padding: 0;
+
+  span {
+    white-space: nowrap;
+    color: #3DDBBF;
+  }
+
+  svg {
+    height: 17px;
+    transition: all .3s ease-in-out;
+  }
+
+  &:hover {
+    svg {
+      margin-left: 5px;
+    }
+  }
+}

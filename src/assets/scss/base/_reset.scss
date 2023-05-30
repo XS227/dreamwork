@@ -1,0 +1,51 @@
+/*=====================
+    Reset Style start
+==========================*/
+.custom-container {
+  padding: 0 calc(14px + (160 - 14) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.custom-container-big {
+  padding: 0 calc(15px + (395 - 15) * ((100vw - 320px) / (1920 - 320)));
+}
+
+section,
+.section-t-space {
+  padding-top: calc(40px + (70 - 40) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.section-b-space {
+  padding-bottom: calc(40px + (70 - 40) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.small-t-space {
+  padding-top: calc(30px + (40 - 30) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.small-b-space {
+  padding-bottom: calc(30px + (40 - 30) * ((100vw - 320px) / (1920 - 320)));
+}
+
+.w-70 {
+  width: 70% !important;
+
+  @media (max-width: 767px) {
+    width: 100% !important;
+  }
+}
+
+.position-sm-absolute {
+  @media (min-width: 576px) {
+    position: absolute;
+  }
+}
+
+section {
+  background-color: $white;
+}
+
+.text-unset {
+  text-transform: unset !important;
+}
+
+

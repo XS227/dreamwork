@@ -1,0 +1,332 @@
+<header id="navbar" class="end" (scroll)="scrolling($event)" [ngClass]="{ 'nav-up': scrollUp, 'nav-down': scrollDown }">
+  <div class="header-sticky">
+    <div class="custom-container">
+      <div class="header-content">
+        <a href="javascript:void(0)" class="d-xl-none d-inline-flex mobile-menu" (click)="openMenu()">
+          <i class="ri-menu-line"></i>
+        </a>
+        <a href="https://dreamwork.no" class="brand-logo">
+          <img src="assets/images/logo.svg" class="img-fluid" alt="logo" />
+        </a>
+        <nav class="header-nav-middle">
+          <div class="main-nav navbar navbar-expand-xl navbar-light navbar-sticky">
+            <div class="offcanvas offcanvas-collapse order-xl-2" [class.show]="show" id="primaryMenu">
+              <button class="btn-close d-xl-none d-block" (click)="openMenu()" type="button"></button>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a href="https://dreamwork.no/ledige-stillinger/" class="nav-link dropdown-toggle">Ledige
+                      stillinger</a>
+                  </li>
+
+                  <li class="nav-item dropdown dropdown-mega">
+
+                    <a class="nav-link dropdown-toggle" target="_self" data-bs-toggle="dropdown"><span
+                        (click)="toggleOnce('https://dreamwork.no/tjenester/', 'one')">Tjenester</span> <i
+                        (click)="toggleMenu('one')" class="ri-arrow-down-s-line"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-2" [class.open]="dropdowns['one'] ">
+                      <div class="row g-sm-4 g-3">
+                        <div class="col-xl-6">
+                          <div class="row g-3">
+                            <div class="col-xl-6">
+                              <a href="https://dreamwork.no/tjenester/rekruttering/" class="header-box">
+                                <h3>Rekruttering</h3>
+                                <p>Er du ute å ansette en ny medarbeider som har den kompetansen du trenger, og vil
+                                  passe inn i din bedrift?</p>
+                              </a>
+                            </div>
+
+                            <div class="col-xl-6">
+                              <a href="https://dreamwork.no/tjenester/bemanning/" class="header-box">
+                                <h3>Bemanning</h3>
+                                <p>Vi finner de rette menneskene med riktige kvalifikasjoner - til avtalt tid og sted.
+                                </p>
+                              </a>
+                            </div>
+
+                            <div class="col-xl-6">
+                              <a href="https://dreamwork.no/konsulenttjenester/" class="header-box">
+                                <h3>Konsulenttjenester</h3>
+                                <p>Vi tilbyr utleie av konsulenter med spesialkompetanse til tidsavgrensede prosjekter
+                                  innenfor salg, IT, HR, ledelse, økonomi og finans.</p>
+                              </a>
+                            </div>
+
+                            <div class="col-xl-6">
+                              <a href="javascript:void(0)" class="header-box">
+                                <h3>Dreamwork Academy</h3>
+                                <p>Kombiner fulltidsjobb med et utdannelsesløp innen våre fagområder.</p>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-xl-6">
+                          <div class="header-content-box">
+                            <div class="header-title">
+                              <h4>Våre tjenester</h4>
+                              <p>Vi jobber strategisk og systematisk for å tiltrekke kandidater –gjennom bruk av
+                                kandidatinnsikt, markedsforståelse og sosiale medier.</p>
+                            </div>
+
+                            <ul class="header-list">
+                              <li>
+                                <a href="https://dreamwork.no/tjenester/headhunter/">Headhunter</a>
+                              </li>
+                              <li>
+                                <a href="https://dreamwork.no/tjenester/vikarbyra/">Vikar</a>
+                              </li>
+                              <li>
+                                <a href="https://dreamwork.no/tjenester/second-opinion/">Second Opinion</a>
+                              </li>
+                              <li>
+                                <a href="https://dreamwork.no/dreamwork-assessment/">Personlighetsanalyse</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="nav-item dropdown dropdown-mega">
+                    <a class="nav-link dropdown-toggle" target="_self" data-bs-toggle="dropdown"><span
+                        (click)="toggleOnce('https://dreamwork.no/fagomrader/', 'two')">Fagområder</span> <i
+                        (click)="toggleMenu('two')" class="ri-arrow-down-s-line"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-2" [class.open]="dropdowns['two'] ">
+                      <div class="row g-sm-4 g-3">
+                        <div class="col-xl-6">
+                          <div class="row g-3">
+                            <div class="col-xl-6">
+                              <a href="https://dreamwork.no/fagomrader/dreamwork-talents/dw-financials-bemanning-innen-regnskap/"
+                                class="header-box">
+                                <h3>Økonomi & Regnskap</h3>
+                                <p>Vi bistår kunder med å bemanne kvalitetskandidater til stillinger innen regnskap,
+                                  bank og finans</p>
+                              </a>
+                            </div>
+
+                            <div class="col-xl-6">
+                              <a href="https://dreamwork.no/fagomrader/dreamwork-retail/" class="header-box">
+                                <h3>Retail</h3>
+                                <p>Dreamwork Retail er spesialister på franchiserekruttering og alle stillinger innenfor
+                                  varehandel.
+                                </p>
+                              </a>
+                            </div>
+
+                            <div class="col-xl-6">
+                              <a href="https://dreamwork.no/fagomrader/dreamwork-talents/bemanning-innen-salg-og-kundeservice/"
+                                class="header-box">
+                                <h3>Salg og Markedsføring</h3>
+                                <p>Dreamwork Talents er spesialisert på bemanning innen salg og kundeservice.</p>
+                              </a>
+                            </div>
+
+                            <div class="col-xl-6">
+                              <a href="https://dreamwork.no/fagomrader/dreamwork-talents/dreamwork-it-rekruttering-innen-it/"
+                                class="header-box">
+                                <h3>IT</h3>
+                                <p>Dreamwork IT bistår kunder med å rekruttere kvalitetskandidater til stillinger innen
+                                  IT.</p>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-xl-6">
+                          <div class="header-content-box">
+                            <div class="header-title">
+                              <h4>Våre tjenester</h4>
+                              <p>Vi jobber strategisk og systematisk for å tiltrekke kandidater –gjennom bruk av
+                                kandidatinnsikt, markedsforståelse og sosiale medier.</p>
+                            </div>
+
+                            <ul class="header-list">
+                              <li>
+                                <a href="https://dreamwork.no/tjenester/rekruttering/">Rekruttering</a>
+                              </li>
+                              <li>
+                                <a href="https://dreamwork.no/tjenester/bemanning/">Bemanning</a>
+                              </li>
+                              <li>
+                                <a href="https://dreamwork.no/konsulenttjenester">Konsulenttjenester</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="nav-item dropdown dropdown-mega">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                      <span (click)="toggleOnce('https://dreamwork.no/for-arbeidsgivere/','three')">Arbeidsgiver</span>
+                      <i (click)="toggleMenu('three')" class="ri-arrow-down-s-line"></i>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-2" [class.open]="dropdowns['three']">
+                      <div class="row g-sm-4 g-3">
+                        <div class="col-xl-6">
+                          <div class="row g-3">
+                            <div class="col-xl-6">
+                              <a href="https://dreamwork.recman.no/login.php" class="header-box">
+                                <h3>Logg inn</h3>
+                                <p>Logg deg inn vår arbeidsgiver portal for å styre din rekrutteringsprosess.</p>
+                              </a>
+                            </div>
+
+                            <div class="col-xl-6">
+                              <a href="https://dreamwork.no/for-arbeidsgivere/" class="header-box">
+                                <h3>Vår rekrutteringsprosess</h3>
+                                <p>Les mer om hva vi kan tilby din bedrift og hvorfor du skal velge oss.</p>
+                              </a>
+                            </div>
+
+                            <div class="col-xl-6">
+                              <a href="https://dreamwork.no/fagomrader/" class="header-box">
+                                <h3>Våre Fagområder</h3>
+                                <p>Se hvilke fagområder vi spesialiserer oss på og lær mer om vår rekrutteringsprosess.
+                                </p>
+                              </a>
+                            </div>
+
+                            <div class="col-xl-6">
+                              <a href="https://dreamwork.no/category/casestudie/" class="header-box">
+                                <h3>Kundereferanser</h3>
+                                <p>Ta en titt på hva våre kunder sier om våre tjenester i videoene på denne undersiden.
+                                </p>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-xl-6">
+                          <div class="header-content-box">
+                            <div class="header-title">
+                              <h4>Våre tjenester</h4>
+                              <p>Vi jobber strategisk og systematisk for å tiltrekke kandidater –gjennom bruk av
+                                kandidatinnsikt, markedsforståelse og sosiale medier.</p>
+                            </div>
+
+                            <ul class="header-list">
+                              <li>
+                                <a href="https://dreamwork.no/tjenester/barselpermisjon/">Barselpermisjon</a>
+                              </li>
+                              <li>
+                                <a href="https://dreamwork.no/tjenester/langtidssykemeldt/">Langtidssykemeldt</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="nav-item dropdown dropdown-mega">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><span
+                        (click)="toggleOnce('https://dreamwork.no/for-sokere/','four')">Jobbsøker</span><i
+                        (click)="toggleMenu('four')" class="ri-arrow-down-s-line"></i></a>
+
+                    <div class="dropdown-menu dropdown-menu-2" [class.open]="dropdowns['four']">
+                      <div class="row g-4">
+                        <div class="col-xl-4">
+                          <div class="row g-3">
+                            <div class="col-12">
+                              <a href="https://dreamwork.recman.no/login.php" class="header-box">
+                                <h3>Logg inn</h3>
+                                <p>Logg deg inn vår jobbsøkerportal for å styre din rekrutteringsprosess.</p>
+                              </a>
+                            </div>
+                            <div class="col-12">
+                              <a href="https://dreamwork.recman.no/register.php?__hstc=81720968.7d01779c70d027c65f9a5d3ab9f53b23.1610094396637.1615828820771.1615842541684.49&__hssc=81720968.1.1616143110039&__hsfp=1965059634&hsCtaTracking=716b2cb8-3ea1-491e-a975-609ffe8ff0d1%7Cc1186e70-4c4a-4c4e-88ef-1ab9b4897802"
+                                class="header-box">
+                                <h3>Registrer din CV</h3>
+                                <p>Opprett en bruker i vår jobbsøkerportal for å legge inn CV og begynne søkeprosessen.
+                                </p>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-xl-6">
+                          <div class="row justify-content-between g-4">
+                            <div class="col-xl-5">
+                              <div class="header-content-box">
+                                <div class="header-list-title">
+                                  <h4>Finn drømmejobben</h4>
+                                </div>
+                                <ul class="header-list-2">
+                                  <li>
+                                    <a href="https://dreamwork.no/for-sokere/">For søkere</a>
+                                  </li>
+                                  <li>
+                                    <a href="https://dreamwork.no/jobbsoker/bli-franchisetaker/">Bli franchisetaker</a>
+                                  </li>
+                                  <li>
+                                    <a href="https://dreamwork.no/dreamwork-academy/">Dreamwork Academy</a>
+                                  </li>
+                                  <li>
+                                    <a href="https://dreamwork.no/jobbsoker/testverktoy/">Dreamwork Testverktøy</a>
+                                  </li>
+                                  <li>
+                                    <a href="https://dreamwork.no/for-sokere/drommejobben/">Dreamwork Drømmejobben</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+
+                            <div class="col-xl-5">
+                              <div class="header-content-box p-0">
+                                <div class="header-list-title">
+                                  <h4>For arbeidstakere</h4>
+                                </div>
+                                <ul class="header-list-2">
+                                  <li>
+                                    <a href="https://dreamwork.no/egenmelding-ved-sykdom/">Egenmelding ved sykdom</a>
+                                  </li>
+                                  <li>
+                                    <a href="https://dreamwork.no/for-vikarer/">For vikarer</a>
+                                  </li>
+                                  <li>
+                                    <a href="https://dreamwork.no/aktuelt/">Artikler</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item d-block d-xl-none">
+                    <a href="https://dreamwork.no/aktuelt/" class="nav-link">Aktuelt</a>
+                  </li>
+                  <li class="nav-item d-block d-xl-none">
+                    <a href="https://karriere.dreamwork.no" class="nav-link">Karriere</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="right-nav">
+          <ul class="navbar-nav d-none d-xl-flex">
+            <li class="nav-item">
+              <a href="https://dreamwork.no/aktuelt/" class="nav-link">Aktuelt</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://karriere.dreamwork.no" class="nav-link">Karriere</a>
+            </li>
+          </ul>
+          <a class="btn btn-solid ms-auto ms-xl-0 d-none d-sm-flex" href="#contact">Kontakt oss
+            <img src="assets/svg/hand.svg" class="img-fluid hand-image" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<a class="menu-overlay" [class.show]="show" (click)="openMenu()"></a>
